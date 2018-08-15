@@ -36,7 +36,7 @@ $ npm install -g truffle
 
 #### Ganache
 
-next instll Ganache a local in-memory blockchain, it will give us 10 external accounts with addresses on our local Ethereum blockchain, Each account is preloaded with 100 fake ether.
+next install Ganache a local in-memory blockchain, it will give us 10 external accounts with addresses on our local Ethereum blockchain, Each account is preloaded with 100 fake ether.
 
 you can download it from [the Truffle Framework website](http://truffleframework.com/ganache),
 

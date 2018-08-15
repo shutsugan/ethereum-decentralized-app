@@ -35,15 +35,22 @@ html, body {
     display: block;
 }
 
-.rows {
-    width: 90%;
-    max-width: 960px;
+.hidden {
+    display: none;
+}
+
+.card {
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
-.rows:hover {
+.card:hover {
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.rows {
+    width: 90%;
+    max-width: 960px;
 }
 
 .rows__head {
@@ -62,7 +69,8 @@ html, body {
 }
 
 .rows__head-title {
-    font-size: 18px;
+    font-size: 14px;
+    font-weight: bold;
     color: #222;
     text-transform: uppercase;
 }
@@ -80,13 +88,54 @@ html, body {
     border-bottom: solid 1px #DDD;
 }
 
-.rows__item-container:last-child {
-    border-bottom: none;
-}
-
 .account {
     line-height: 40px;
     text-align: center;
     font-size: 14px;
     color: #AAA;
+    background: #FAFAFA;
+}
+
+.form {
+    width: 90%;
+    max-width: 960px;
+}
+
+.form__select-group {
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid 1px #DDD
+}
+
+.form__label {
+    line-height: 40px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #222;
+    border-bottom: dashed 1px #DDD
+}
+
+.form__select {
+    margin: 16px;
+    height: 30px;
+    border:none;
+    border-bottom: solid 1px #DDD;
+}
+
+.form__button {
+    border: none;
+    width: 100%;
+    height: 40px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #222;
+    background: #EEE;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background .3s;
+}
+
+.form__button:hover {
+    background: rgb(212, 210, 210);
 }

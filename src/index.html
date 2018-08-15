@@ -25,9 +25,7 @@
         <br/>
       </div>
 
-      
-
-      <div class="rows">
+      <div class="rows card">
         <div class="rows__head sides-padding">
           <div class="rows__head-title">#</div>
           <div class="rows__head-title">Name</div>
@@ -37,6 +35,16 @@
           <div class="loader">Loading...</div>
         </div>
         <div class="account"></div>
+      </div>
+      <br/>
+      <div class="form card">
+        <form onSubmit="App.castVote(); return false;">
+          <div class="form__select-group">
+            <label class="form__label sides-padding" for="candidateSelector">Select Candidate</label>
+            <select class="form__select" id="candidateSelector"></select>
+          </div>
+          <button type="submit" class="form__button">Vote</button>
+        </form>
       </div>
     </div>
 

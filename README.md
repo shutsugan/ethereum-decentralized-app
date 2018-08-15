@@ -67,7 +67,7 @@ $ npm run dev
 
 ![client-side server screenshot](../master/screenshots/client.png)
 
-then the address in a browser.
+then type the address in a browser.
 
     Local: http://localhost:3000
 

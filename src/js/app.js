@@ -26,6 +26,8 @@ App = {
       App.contracts.Election = TruffleContract(election);
       App.contracts.Election.setProvider(App.web3Provider);
 
+      App.listenForEvents();
+
       return App.render();
     };
     getJson(url, cb);
@@ -47,6 +49,25 @@ App = {
         console.log(result);
       })
       .catch(err => console.error(err));
+  },
+
+  listenForEvents: function() {
+    App.contracts.Election
+      .deployed()
+      .then(instance => {
+        instance.votedEvent({}, {
+          fromBlock: 0,
+          toBlock: 'latest'
+        })
+        .watch((err, event) => {
+          if (err) return;
+
+          console.log('Event triggered', event);
+
+          //Reload when new vote is recorded
+          App.render();
+        })
+      });
   },
 
   render: function() {
